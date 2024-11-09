@@ -9,6 +9,12 @@ function Header() {
           🌱
         </span>
       </h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/new-plant">Add New Plant</a></li>
+        </ul>
+      </nav>
     </header>
   );
 }

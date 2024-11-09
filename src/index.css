@@ -1,5 +1,9 @@
 :root {
   --green: rgb(39, 189, 39);
+  --light-green: rgba(181, 250, 181, 0.5);
+  --dark-green: #285e28;
+  --background: #f5f9f5;
+  --card-border: rgba(39, 189, 39, 0.2);
 }
 
 * {
@@ -10,10 +14,13 @@
 
 body {
   font-family: "Playfair Display", serif;
+  background-color: var(--background);
+  color: #333;
 }
 
 h2 {
   margin-bottom: 1rem;
+  color: var(--dark-green);
 }
 
 button {
@@ -26,11 +33,13 @@ button {
 button.primary {
   background-color: var(--green);
   color: white;
+  border-radius: 5px;
 }
 
 .app {
   margin: 0 auto;
   max-width: 1200px;
+  padding: 1rem;
 }
 
 header h1 {
@@ -38,6 +47,7 @@ header h1 {
   font-weight: 900;
   text-align: center;
   padding: 0.5rem 0;
+  color: var(--dark-green);
 }
 
 .logo {
@@ -54,21 +64,26 @@ main {
 .new-plant-form {
   padding: 2rem 1rem;
   margin: 2rem 0;
-  background-color: rgba(181, 250, 181, 0.5);
+  background-color: var(--light-green);
+  border: 2px solid var(--card-border);
+  border-radius: 10px;
 }
 
 .new-plant-form form {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .new-plant-form input {
-  margin-right: 2rem;
+  margin-right: 1rem;
   flex: 1;
+  min-width: 150px;
 }
 
 .new-plant-form button {
   width: 150px;
+  margin-top: 0.5rem;
 }
 
 .searchbar {
@@ -80,6 +95,7 @@ main {
 label {
   font-weight: bold;
   display: block;
+  color: var(--dark-green);
 }
 
 input {
@@ -99,39 +115,56 @@ input:focus {
 
 .cards {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .card {
-  margin: 1rem;
+  background-color: white;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card img {
   width: 100%;
+  border-radius: 5px;
+}
+
+.card h4 {
+  color: var(--dark-green);
+  margin-top: 0.5rem;
 }
 
 .card button {
   margin-top: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
 }
 
 @media (min-width: 768px) {
   .cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .card {
-    width: calc(33% - 2rem);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .card {
-    width: calc(25% - 2rem);
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (min-width: 1200px) {
-  .card {
-    width: calc(20% - 2rem);
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
