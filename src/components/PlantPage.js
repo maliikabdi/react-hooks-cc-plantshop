@@ -14,6 +14,18 @@ function PlantPage() {
       .then((data) => setPlants(data));
   }, []);
 
+  function handleDelete(plantId) {
+    // Send DELETE request to the server
+    fetch(`http://localhost:6001/plants/${plantId}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        // Update the state by filtering out the deleted plant
+        setPlants(plants.filter((plant) => plant.id !== plantId));
+      });
+  }
+
+
 
 
   function addPlant(newPlant) {
@@ -61,7 +73,7 @@ function PlantPage() {
       <Header />
       <NewPlantForm addPlant={addPlant} />
       <Search onSearch={handleSearch} />
-      <PlantList plants={filteredPlants} onUpdatePlant={updatePlant} />
+      <PlantList plants={filteredPlants} onUpdatePlant={updatePlant}  onDelete={handleDelete} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function PlantCard({ plant, onUpdatePlant }) {
+function PlantCard({ plant, onUpdatePlant, onDelete}) {
   // Destructuring plant object to access its properties
   const { name, image, price, soldout } = plant;
 
@@ -19,6 +19,7 @@ function PlantCard({ plant, onUpdatePlant }) {
       ) : (
         <button className="primary" onClick={handleSoldOutClick}>In Stock</button>
       )}
+       <button onClick={() => onDelete(plant.id)}>Delete</button>
     </li>
   );
 }
