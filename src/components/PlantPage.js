@@ -9,14 +9,14 @@ function PlantPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:6001/plants")
+    fetch("https://react-hooks-cc-plantshop-7-hfln.onrender.com/plants")
       .then((response) => response.json())
       .then((data) => setPlants(data));
   }, []);
 
   function handleDelete(plantId) {
     // Send DELETE request to the server
-    fetch(`http://localhost:6001/plants/${plantId}`, {
+    fetch(`https://react-hooks-cc-plantshop-7-hfln.onrender.com/plants/${plantId}`, {
       method: "DELETE",
     })
       .then(() => {
@@ -29,7 +29,7 @@ function PlantPage() {
 
 
   function addPlant(newPlant) {
-    fetch("http://localhost:6001/plants", {
+    fetch("https://react-hooks-cc-plantshop-7-hfln.onrender.com/plants", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ function PlantPage() {
 
   function updatePlant(updatedPlant) {
     // Update the backend to mark the plant as "sold out"
-    fetch(`http://localhost:6001/plants/${updatedPlant.id}`, {
+    fetch(`https://react-hooks-cc-plantshop-7-hfln.onrender.com/plants/${updatedPlant.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
