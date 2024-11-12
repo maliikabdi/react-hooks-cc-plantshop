@@ -27,7 +27,7 @@ JSON Server for the Backend
 
 # Support and Contact details
 
-lildarwish13158@gmail.com
+https://github.com/maliikabdi/react-hooks-cc-plantshop
 
 # License
 
