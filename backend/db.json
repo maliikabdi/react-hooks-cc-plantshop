@@ -1,0 +1,44 @@
+{
+  "plants": [
+    {
+      "id": 2,
+      "name": "ZZ Plant",
+      "image": "./images/zz-plant.jpg",
+      "price": 25.98,
+      "soldout": false
+    },
+    {
+      "id": 3,
+      "name": "Pilea peperomioides",
+      "image": "./images/pilea.jpg",
+      "price": 5.99,
+      "soldout": false
+    },
+    {
+      "id": 4,
+      "name": "Pothos",
+      "image": "./images/pothos.jpg",
+      "price": 12.11,
+      "soldout": false
+    },
+    {
+      "id": 5,
+      "name": "Jade",
+      "image": "./images/jade.jpg",
+      "price": 10.37,
+      "soldout": false
+    },
+    {
+      "id": 6,
+      "name": "Monstera Deliciosa",
+      "image": "./images/monstera.jpg",
+      "price": 25.99
+    },
+    {
+      "id": 7,
+      "name": "Fiddle Leaf Fig",
+      "image": "./images/fiddle-leaf-fig.jpg",
+      "price": 55
+    }
+  ]
+}
