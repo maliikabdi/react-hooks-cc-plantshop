@@ -9,7 +9,7 @@ function PlantPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch("https://react-hooks-cc-plantshop-7-r7gw.onrender.com/plants")
+    fetch("https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -24,7 +24,7 @@ function PlantPage() {
   }, []);
 
   function handleDelete(plantId) {
-    fetch(`https://react-hooks-cc-plantshop-7-r7gw.onrender.com/plants/${plantId}`, {
+    fetch(`https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants/${plantId}`, {
       method: "DELETE",
     })
       .then((response) => {
@@ -38,7 +38,7 @@ function PlantPage() {
   }
 
   function addPlant(newPlant) {
-    fetch("https://react-hooks-cc-plantshop-7-r7gw.onrender.com/plants", {
+    fetch("https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +51,7 @@ function PlantPage() {
   }
 
   function updatePlant(updatedPlant) {
-    fetch(`https://react-hooks-cc-plantshop-7-r7gw.onrender.com/plants/${updatedPlant.id}`, {
+    fetch(`https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants/${updatedPlant.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
