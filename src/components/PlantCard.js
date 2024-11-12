@@ -1,16 +1,14 @@
 import React from "react";
 
-function PlantCard({ plant, onUpdatePlant, onDelete}) {
-  // Destructuring plant object to access its properties
+function PlantCard({ plant, onUpdatePlant, onDelete }) {
   const { name, image, price, soldout } = plant;
 
   const handleSoldOutClick = () => {
-    onUpdatePlant({ ...plant, soldout: !soldout });
-  }
+    onUpdatePlant({ ...plant, soldout: !soldout }); // Toggle soldout status
+  };
 
   return (
     <li className="card" data-testid="plant-item">
-      {/* Use dynamic values for image and text */}
       <img src={image} alt={name} />
       <h4>{name}</h4>
       <p>Price: ${price}</p>
@@ -19,7 +17,7 @@ function PlantCard({ plant, onUpdatePlant, onDelete}) {
       ) : (
         <button className="primary" onClick={handleSoldOutClick}>In Stock</button>
       )}
-       <button onClick={() => onDelete(plant.id)}>Delete</button>
+      <button onClick={() => onDelete(plant.id)}>Delete</button>
     </li>
   );
 }
