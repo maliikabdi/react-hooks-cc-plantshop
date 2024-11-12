@@ -10,21 +10,17 @@ function PlantPage() {
 
   useEffect(() => {
     fetch("https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Network response was not ok: ${response.statusText}`);
-        }
-        return response.json();
-      })
-      .then((data) => setPlants(Array.isArray(data) ? data : []))
+      .then((response) => response.json())
+      .then((data) => setPlants(data))
       .catch((error) => {
-        console.error("Error fetching plants:", error);
+
         setPlants([]); // Set plants to an empty array if fetch fails
       });
   }, []);
+  console.log(plants);
 
   function handleDelete(plantId) {
-    fetch(`https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants/${plantId}`, {
+    fetch(`https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants`, {
       method: "DELETE",
     })
       .then((response) => {
