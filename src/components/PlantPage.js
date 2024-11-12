@@ -9,7 +9,7 @@ function PlantPage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch("https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants")
+    fetch("https://react-hooks-cc-plantshop-10-db3r.onrender.com/plants")
       .then((response) => response.json())
       .then((data) => setPlants(data))
       .catch((error) => {
@@ -20,7 +20,7 @@ function PlantPage() {
   console.log(plants);
 
   function handleDelete(plantId) {
-    fetch(`https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants`, {
+    fetch(`https://react-hooks-cc-plantshop-10-db3r.onrender.com/plants`, {
       method: "DELETE",
     })
       .then((response) => {
@@ -34,7 +34,7 @@ function PlantPage() {
   }
 
   function addPlant(newPlant) {
-    fetch("https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants", {
+    fetch("https://react-hooks-cc-plantshop-10-db3r.onrender.com/plants", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ function PlantPage() {
   }
 
   function updatePlant(updatedPlant) {
-    fetch(`https://react-hooks-cc-plantshop-9-mi1h.onrender.com/plants/${updatedPlant.id}`, {
+    fetch(`https://react-hooks-cc-plantshop-10-db3r.onrender.com/plants/${updatedPlant.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
