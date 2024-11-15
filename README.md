@@ -16,6 +16,10 @@ A simple plant store application where you can view, add, search, mark, and dele
 -Search plants by name
 -Delete plants
 
+# Live server
+you can view the live web page app on : 
+you can view the render here :
+
 # Installation
 
 Clone this repository to your local machine to get started with plant store.
@@ -27,7 +31,7 @@ JSON Server for the Backend
 
 # Support and Contact details
 
-https://github.com/maliikabdi/react-hooks-cc-plantshop
+lildarwish13158@gmail.com
 
 # License
 
