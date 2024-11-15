@@ -17,8 +17,8 @@ A simple plant store application where you can view, add, search, mark, and dele
 -Delete plants
 
 # Live server
-you can view the live web page app on : 
-you can view the render here :
+you can view the live web page app on : https://maliikabdi.netlify.app/
+you can view the render here :https://react-hooks-cc-plantshop-10-db3r.onrender.com
 
 # Installation
 
